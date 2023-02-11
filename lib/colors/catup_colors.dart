@@ -9,6 +9,9 @@ class CatUpColors {
   /// {@macro AccentColors}
   static const AccentColors accent = AccentColors();
 
+  /// {@macro BlackColors}
+  static const AccentColors blackness = AccentColors();
+
   /// {@macro BackGroundColors}
   static const BackGroundColors background = BackGroundColors();
 }
@@ -23,6 +26,18 @@ class AccentColors {
   const AccentColors()
       : yellow = const Color(0xFFFFFF00),
         red = Colors.red;
+}
+
+/// {@template BlackColors}
+/// The data class containing the black colors of the application.
+/// {@endtemplate}
+class BlackColors {
+  final Color black;
+  final Color grey;
+
+  const BlackColors()
+      : black = Colors.black,
+        grey = Colors.grey;
 }
 
 /// {@template BackGroundColors}
