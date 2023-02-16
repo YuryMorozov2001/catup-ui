@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'package:catupui/catupui.dart';
+import 'package:catupui/text/catup_text_theme.dart';
 import 'package:flutter/widgets.dart';
 
 enum _ConstructorType {
@@ -20,19 +22,31 @@ class CatUpSelectableText {
 
 class CatUpText extends StatelessWidget {
   const CatUpText(
-      {super.key, required this.data, this.maxLines, this.style, this.softWrap})
-      : constructorType = _ConstructorType.body1;
+      {Key? key, required this.data, this.maxLines, this.style, this.softWrap})
+      : _constructorType = _ConstructorType.body1,
+        super(key: key);
   const CatUpText.header(
-      {super.key, required this.data, this.maxLines, this.style, this.softWrap})
-      : constructorType = _ConstructorType.body1;
+      {Key? key, required this.data, this.maxLines, this.style, this.softWrap})
+      : _constructorType = _ConstructorType.header,
+        super(key: key);
   final String data;
   final int? maxLines;
   final TextStyle? style;
   final bool? softWrap;
-  final _ConstructorType constructorType;
+  final _ConstructorType _constructorType;
+
+  TextStyle _getStyleByConstructorName(BuildContext context) {
+    switch (_constructorType) {
+      case _ConstructorType.body1:
+        return CatUpTheme.of(context).textTheme.body1!;
+      case _ConstructorType.header:
+        return CatUpTheme.of(context).textTheme.header!;
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
-    return const Placeholder();
+    final style = _getStyleByConstructorName(context);
+    return Text(data, style: style);
   }
 }
