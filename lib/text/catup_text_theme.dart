@@ -2,8 +2,9 @@
 import 'package:flutter/widgets.dart';
 
 class CatUpTextTheme {
-  const CatUpTextTheme({this.body1, this.header});
-  final TextStyle? header;
+  const CatUpTextTheme({this.body1, this.header1, this.header2});
+  final TextStyle? header1;
+  final TextStyle? header2;
   final TextStyle? body1;
 
   // CatUpTextTheme merge(CatUpTextTheme? other) {
@@ -14,11 +15,13 @@ class CatUpTextTheme {
   // }
 
   CatUpTextTheme copyWith({
-    TextStyle? header,
+    TextStyle? header1,
+    TextStyle? header2,
     TextStyle? body1,
   }) {
     return CatUpTextTheme(
-      header: header ?? this.header,
+      header1: header1 ?? this.header1,
+      header2: header2 ?? this.header2,
       body1: body1 ?? this.body1,
     );
   }

@@ -9,7 +9,7 @@ void main() {
       expect(
         textTheme,
         const CatUpTextTheme(
-          header: TextStyle(
+          header1: TextStyle(
             debugLabel: 'header',
             fontSize: 48.0,
           ),

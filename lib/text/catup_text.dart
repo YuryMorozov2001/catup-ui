@@ -4,7 +4,8 @@ import 'package:catupui/text/catup_text_theme.dart';
 import 'package:flutter/widgets.dart';
 
 enum _ConstructorType {
-  header,
+  header1,
+  header2,
   body1,
 }
 
@@ -25,9 +26,13 @@ class CatUpText extends StatelessWidget {
       {Key? key, this.maxLines, this.style, this.softWrap})
       : _constructorType = _ConstructorType.body1,
         super(key: key);
-  const CatUpText.header(this.data,
+  const CatUpText.header1(this.data,
       {Key? key, this.maxLines, this.style, this.softWrap})
-      : _constructorType = _ConstructorType.header,
+      : _constructorType = _ConstructorType.header1,
+        super(key: key);
+  const CatUpText.header2(this.data,
+      {Key? key, this.maxLines, this.style, this.softWrap})
+      : _constructorType = _ConstructorType.header2,
         super(key: key);
   final String data;
   final int? maxLines;
@@ -39,8 +44,10 @@ class CatUpText extends StatelessWidget {
     switch (_constructorType) {
       case _ConstructorType.body1:
         return CatUpTheme.of(context).textTheme.body1!;
-      case _ConstructorType.header:
-        return CatUpTheme.of(context).textTheme.header!;
+      case _ConstructorType.header1:
+        return CatUpTheme.of(context).textTheme.header1!;
+      case _ConstructorType.header2:
+        return CatUpTheme.of(context).textTheme.header2!;
     }
   }
 
