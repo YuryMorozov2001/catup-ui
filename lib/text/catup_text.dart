@@ -53,7 +53,7 @@ class CatUpText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final style = _getStyleByConstructorName(context);
-    return Text(data, style: style);
+    final defaultStyle = _getStyleByConstructorName(context);
+    return Text(data, style: defaultStyle.merge(style));
   }
 }
