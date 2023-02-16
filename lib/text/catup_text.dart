@@ -21,12 +21,12 @@ class CatUpSelectableText {
 }
 
 class CatUpText extends StatelessWidget {
-  const CatUpText(
-      {Key? key, required this.data, this.maxLines, this.style, this.softWrap})
+  const CatUpText(this.data,
+      {Key? key, this.maxLines, this.style, this.softWrap})
       : _constructorType = _ConstructorType.body1,
         super(key: key);
-  const CatUpText.header(
-      {Key? key, required this.data, this.maxLines, this.style, this.softWrap})
+  const CatUpText.header(this.data,
+      {Key? key, this.maxLines, this.style, this.softWrap})
       : _constructorType = _ConstructorType.header,
         super(key: key);
   final String data;
