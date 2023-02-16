@@ -10,7 +10,7 @@ void main() {
         textTheme,
         const CatUpTextTheme(
           header1: TextStyle(
-            debugLabel: 'header',
+            debugLabel: 'header1',
             fontSize: 48.0,
           ),
           body1: TextStyle(

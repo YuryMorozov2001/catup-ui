@@ -7,13 +7,6 @@ class CatUpTextTheme {
   final TextStyle? header2;
   final TextStyle? body1;
 
-  // CatUpTextTheme merge(CatUpTextTheme? other) {
-  //   if (other == null) {
-  //     return this;
-  //   }
-  //   return copyWith(header: header?.merge(other.header) ?? other.header);
-  // }
-
   CatUpTextTheme copyWith({
     TextStyle? header1,
     TextStyle? header2,
