@@ -1,24 +1,11 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 import 'package:catupui/catupui.dart';
-import 'package:catupui/text/catup_text_theme.dart';
 import 'package:flutter/widgets.dart';
 
 enum _ConstructorType {
   header1,
   header2,
   body1,
-}
-
-class CatUpSelectableText {
-  /// Callback функция при изменении выделения текста
-  final SelectionChangedCallback? onSelectionChanged;
-
-  /// Callback функция при тапе на текст
-  final GestureTapCallback? onTap;
-  const CatUpSelectableText({
-    this.onSelectionChanged,
-    this.onTap,
-  });
 }
 
 class CatUpText extends StatelessWidget {
